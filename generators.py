@@ -2,6 +2,7 @@ import re
 
 print("Start generators.py")
 
+
 def match_sxz(noun):
     return re.search('[sxz]$', noun)
 
@@ -65,7 +66,7 @@ patterns = \
   )
 
 #This list of tuples should contain the same values (functions) as the previous rules
-rules = [build_match_and_apply_functions(pattern, search, replace) 
+rules = [build_match_and_apply_functions(pattern, search, replace)
          for (pattern, search, replace) in patterns]
 
 rules = []
@@ -84,7 +85,8 @@ def fib(max):
         a, b = b, a + b
 #for loop will automatically call next on our generator
 for n in fib(200):
-    print(n, end=' ')
+    print(n, end = ' ')
+
 print('')
 print([n for n in fib(200)])
 print(list(fib(200)))

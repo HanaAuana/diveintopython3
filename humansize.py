@@ -3,16 +3,18 @@ SUFFIXES = {
     1024: ['KiB', 'MiB', 'GiB', 'TiB', 'PiB']
 }
 
+
 def approximate_size(size, kb_is_1024_bytes=True):
-    '''Convert file size into readable format.
+    """Convert file size into readable format.
 
     Keyword arguments:
-    size -- file size in bytes 
-    kb_is_1024_bytes -- if True (default), use multiples of 1024, if False use multiples of 1000
+    size -- file size in bytes
+    kb_is_1024_bytes -- if True (default), use multiples of 1024,
+    if False use multiples of 1000
 
     Returns: string
 
-    '''
+    """
     if size < 0:
         raise ValueError('Number must be non-negative')
 

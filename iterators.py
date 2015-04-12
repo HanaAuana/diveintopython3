@@ -13,13 +13,14 @@ class Fib:
         if fib > self.max:
             raise StopIteration
         self.a, self.b = self.b, self.a + self.b
-        #Don't need to use yield when creating an iterator
+        # Don't need to use yield when creating an iterator
         return fib
 
 for n in Fib(1000):
     print(n, end=' ')
 
-from  generators import build_match_and_apply_functions
+from generators import build_match_and_apply_functions
+
 
 class LazyRules:
 
@@ -35,7 +36,7 @@ class LazyRules:
 
     def __next__(self):
         self.cache_index += 1
-        
+
         if len(self.cache) >= self.cache_index:
             return self.cache[self.cache_index - 1]
 
